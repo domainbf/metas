@@ -72,19 +72,18 @@ export const StarReminder: FC = () => {
     <AlertDialog open={shouldShow} onOpenChange={onOpenChange}>
       <AlertDialogContent>
         <AlertDialogHeader>
-          <AlertDialogTitle>Are you enjoying Domain Digger?</AlertDialogTitle>
+          <AlertDialogTitle>My domain name collection.</AlertDialogTitle>
           <AlertDialogDescription>
-            Domain Digger is 100% free and open-source without any ads. If you
-            like it, please consider starring the GitHub repository!
+            Just like people like to collect stamps, antiques, watches and cars, one of my hobbies is to collect personalized domain names. I believe that these unique domain names can not only be used as investment assets, but also as an important foundation for building a personal brand. In his eyes, every domain name contains infinite possibilities, just as every collectible carries a story and value behind it, and behind every domain name, isn't it a story?
             <div className="mt-8 flex justify-center">
               <Button variant="ghost" asChild onClick={onClick}>
                 <a
-                  href="https://github.com/wotschofsky/domain-digger"
+                  href="https://domain.bf"
                   target="_blank"
                   rel="noopener"
                 >
                   <FaGithub className="mr-1 h-6 w-4" />
-                  <span>Star</span>
+                  <span>Click to view</span>
                   <span className="sr-only">on GitHub</span>
                 </a>
               </Button>
