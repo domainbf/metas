@@ -1,4 +1,4 @@
-import { HeartIcon } from 'lucide-react';
+import { RiAlipayLine } from "react-icons/ri";
 import Link from 'next/link';
 import type { FC } from 'react';
 import { FaGithub } from 'react-icons/fa';
@@ -27,7 +27,7 @@ export const Header: FC = () => (
             target="_blank"
             rel="noopener"
           >
-            <HeartIcon className="mr-1 h-6 w-4 text-pink-600" />
+            <RiAlipayLine className="mr-1 h-6 w-4 text-pink-600" />
             <span>Sponsor</span>
           </a>
         </Button>
