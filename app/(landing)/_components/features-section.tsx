@@ -7,7 +7,7 @@ type FeaturesSectionProps = HTMLAttributes<HTMLElement>;
 export const FeaturesSection: FC<FeaturesSectionProps> = (props) => (
   <section {...props}>
     <h2 className="mb-6 text-center text-3xl font-bold">
-      met.as: The Essential Domain Information Tool
+      MAT.AS: The Essential Domain Information Tool
     </h2>
 
     <div className="mb-24 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
