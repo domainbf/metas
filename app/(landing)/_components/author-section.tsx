@@ -17,8 +17,8 @@ export const AuthorSection: FC<AuthorSectionProps> = ({
     {...props}
   >
     <img
-      width={48}
-      height={48}
+      width={58}
+      height={68}
       className="h-12 w-12 rounded-full"
       src="https://wubaohu.com/wp-content/uploads/2024/08/Lee.png?v=123456789"
       alt="Felix Wotschofsky, creator of Domain Met.as"
