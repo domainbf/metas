@@ -1,7 +1,7 @@
-import { RiAlipayLine } from "react-icons/ri";
+import { TbBrandAlipay } from "react-icons/tb";
 import Link from 'next/link';
 import type { FC } from 'react';
-import { FaGithub } from 'react-icons/fa';
+import { AiOutlineGlobal } from "react-icons/ai";
 
 import { Button } from '@/components/ui/button';
 
@@ -23,23 +23,23 @@ export const Header: FC = () => (
       <div className="flex items-center justify-between gap-4">
         <Button variant="ghost" asChild>
           <a
-            href="https://github.com/sponsors/wotschofsky"
+            href="https://domain.bf"
             target="_blank"
             rel="noopener"
           >
-            <RiAlipayLine className="mr-1 h-6 w-4 text-pink-600" />
+            <TbBrandAlipay className="mr-1 h-6 w-4 text-pink-600" />
             <span>Sponsor</span>
           </a>
         </Button>
         <Button variant="ghost" asChild>
           <a
-            href="https://github.com/wotschofsky/domain-digger"
+            href="https://domain.bf"
             target="_blank"
             rel="noopener"
           >
-            <FaGithub className="mr-1 h-6 w-4" />
-            <span>Star</span>
-            <span className="sr-only">on GitHub</span>
+            <AiOutlineGlobal className="mr-1 h-6 w-4" />
+            <span>domain</span>
+            <span className="sr-only">Domain for sale</span>
           </a>
         </Button>
         <div className="hidden sm:block">
