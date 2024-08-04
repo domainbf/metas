@@ -1,5 +1,5 @@
 import type { FC, HTMLAttributes } from 'react';
-import { FaGithub, FaHeart } from 'react-icons/fa';
+import { MdOutlineAttribution } from "react-icons/md";
 
 import { Button } from '@/components/ui/button';
 
@@ -50,8 +50,8 @@ export const Footer: FC = () => (
             target="_blank"
             rel="noopener"
           >
-            <FaGithub className="h-6 w-6" />
-            <span className="sr-only">GitHub Repository</span>
+            <MdOutlineAttribution className="h-6 w-6" />
+            <span className="sr-only">Designer Author</span>
           </a>
         </Button>
       </div>
