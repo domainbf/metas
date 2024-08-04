@@ -2,7 +2,7 @@
 
 import type { FC } from 'react';
 import { useEffect } from 'react'; // 引入 useEffect 钩子
-import { FaHeart, FaWeebly, FaDochub, FaCopyright } from 'react-icons/fa';
+import { FaWeebly, } from 'react-icons/fa';
 import { Button } from '@/components/ui/button';
 
 export const Footer: FC = () => {
