@@ -14,7 +14,7 @@ export const TrustedBySection: FC<TrustedBySectionProps> = (props) => (
       <TrustedByLogos />
 
       <a
-        href="https://nic.bb?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-domain&#0045;digger"
+        href="https://nic.bn?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-domain&#0045;digger"
         target="_blank"
         className="mt-2"
       >
