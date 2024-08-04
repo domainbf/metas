@@ -1,4 +1,4 @@
-import Image from 'next/image';
+
 import type { FC, HTMLAttributes } from 'react';
 
 import { cn } from '@/lib/utils';
@@ -16,20 +16,20 @@ export const AuthorSection: FC<AuthorSectionProps> = ({
     )}
     {...props}
   >
-    <Image
+    <img
       width={48}
       height={48}
       className="h-12 w-12 rounded-full"
-      src="https://static.wsky.dev/branding/photo.jpg"
-      alt="Felix Wotschofsky, creator of Domain Digger"
+      src="https://wubaohu.com/wp-content/uploads/2024/08/Lee.png?v=123456789"
+      alt="Felix Wotschofsky, creator of Domain Met.as"
     />
     <div>
-      <p>Hey there, I am Felix, the creator of Domain Digger. 👋</p>
+      <p>Hey there, I am Lee, the creator of Domain Met.as. 👋</p>
       <p>
         You can{' '}
         <a
           className="underline decoration-dotted underline-offset-4"
-          href="https://x.com/wotschofsky"
+          href="https://twitter.com/domain_bf"
           target="_blank"
         >
           follow me on X
@@ -37,7 +37,7 @@ export const AuthorSection: FC<AuthorSectionProps> = ({
         and{' '}
         <a
           className="underline decoration-dotted underline-offset-4"
-          href="https://wotschofsky.com/"
+          href="https://dev.ug/"
           target="_blank"
         >
           check out my other projects
@@ -46,4 +46,3 @@ export const AuthorSection: FC<AuthorSectionProps> = ({
       </p>
     </div>
   </section>
-);
