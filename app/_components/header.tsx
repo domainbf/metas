@@ -17,7 +17,7 @@ export const Header: FC = () => (
       <Link className="flex items-center gap-2" href="/" aria-label="Home Page">
         <LogoDark className="inline h-6 dark:hidden" />
         <LogoLight className="hidden h-6 dark:inline" />
-        Domain Digger
+        met.as
       </Link>
 
       <div className="flex items-center justify-between gap-4">
