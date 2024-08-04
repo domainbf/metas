@@ -1,60 +1,75 @@
-import type { FC, HTMLAttributes } from 'react';
-import { MdOutlineAttribution } from "react-icons/md";
+"use client"; // 添加这一行
 
+import type { FC } from 'react';
+import { useEffect } from 'react'; // 引入 useEffect 钩子
+import { FaHeart, FaWeebly, FaDochub, FaIdeal } from 'react-icons/fa';
 import { Button } from '@/components/ui/button';
 
-import PoweredByVercel from '@/assets/powered-by-vercel.svg';
-import { cn } from '@/lib/utils';
+export const Footer: FC = () => {
+  useEffect(() => {
+    // 动态插入统计脚本
+    const script = document.createElement('script');
+    script.src = 'https://china.tn/pixel/Etdei8K77dOab7WT';
+    script.defer = true;
+    document.body.appendChild(script);
 
-type VercelBadgeProps = HTMLAttributes<HTMLAnchorElement>;
+    // 清理函数，移除脚本
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []); // 空依赖数组，确保只在组件挂载时运行一次
 
-const VercelBadge: FC<VercelBadgeProps> = ({ className, ...props }) => (
-  <a
-    className={cn('[&>svg]:h-10', className)}
-    href="https://vercel.com/?utm_source=domain-digger&utm_campaign=oss"
-    target="_blank"
-    rel="noopener"
-    {...props}
-  >
-    <PoweredByVercel />
-    <span className="sr-only">Powered by Vercel</span>
-  </a>
-);
-
-export const Footer: FC = () => (
-  <footer className="w-full p-4 md:px-8">
-    <div className="flex flex-col items-center gap-4 border-t pt-4">
-      <VercelBadge className="md:hidden" />
-
-      <div className="flex w-full items-center justify-between">
+  return (
+    <footer className="w-full p-4 md:px-8">
+      <div className="flex items-center justify-between border-t pt-4">
         <p className="text-sm">
-          Created with{' '}
+          ©️2024{' '}
           <FaHeart className="inline text-red-500" fontSize="1.25rem" />
-          <span className="sr-only">love</span> by{' '}
+          <span className="sr-only">love</span> 🇨🇳{' '}
           <a
             className="underline decoration-dotted underline-offset-4"
-            href="https://wotschofsky.com"
+            href="https://domain.bf"
             target="_blank"
-            rel="noopener"
-            aria-label="Felix Wotschofsky (Site Creator)"
+            rel="noopener noreferrer"
+            aria-label="不讲李 (Site Creator)"
           >
-            Felix Wotschofsky
+            Met.as
           </a>
         </p>
 
-        <VercelBadge className="hidden md:block" />
-
-        <Button variant="ghost" asChild>
-          <a
-            href="https://github.com/wotschofsky/domain-digger"
-            target="_blank"
-            rel="noopener"
-          >
-            <MdOutlineAttribution className="h-6 w-6" />
-            <span className="sr-only">Designer Author</span>
-          </a>
-        </Button>
+        <div>
+          <Button variant="ghost" asChild>
+            <a
+              href="https://whois.ls"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaWeebly className="h-6 w-6" />
+              <span className="sr-only">Visit whois.ls</span>
+            </a>
+          </Button>
+          <Button variant="ghost" asChild>
+            <a
+              href="https://domain.bf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaDochub className="h-6 w-6" />
+              <span className="sr-only">Visit domain name</span>
+            </a>
+          </Button>
+          <Button variant="ghost" asChild>
+            <a
+              href="https://wotschofsky.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaIdeal className="h-6 w-6" />
+              <span className="sr-only">Visit author</span>
+            </a>
+          </Button>
+        </div>
       </div>
-    </div>
-  </footer>
-);
+    </footer>
+  );
+};
