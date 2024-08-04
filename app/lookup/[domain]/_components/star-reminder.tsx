@@ -4,7 +4,7 @@ import { useLocalStorage } from '@uidotdev/usehooks';
 import { usePlausible } from 'next-plausible';
 import { usePathname } from 'next/navigation';
 import { type FC, useCallback, useEffect, useRef, useState } from 'react';
-import { FaGithub } from 'react-icons/fa';
+import { RiGlobalLine } from "react-icons/ri";
 
 import {
   AlertDialog,
@@ -82,7 +82,7 @@ export const StarReminder: FC = () => {
                   target="_blank"
                   rel="noopener"
                 >
-                  <FaGithub className="mr-1 h-6 w-4" />
+                  <RiGlobalLine className="mr-1 h-6 w-4" />
                   <span>Click to view</span>
                   <span className="sr-only">on GitHub</span>
                 </a>
