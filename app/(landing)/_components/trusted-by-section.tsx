@@ -14,14 +14,14 @@ export const TrustedBySection: FC<TrustedBySectionProps> = (props) => (
       <TrustedByLogos />
 
       <a
-        href="https://www.producthunt.com/posts/domain-digger?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-domain&#0045;digger"
+        href="https://nic.bb?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-domain&#0045;digger"
         target="_blank"
         className="mt-2"
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=434616&theme=neutral"
-          alt="Domain&#0032;Digger - Full&#0032;open&#0045;source&#0032;toolkit&#0032;for&#0032;next&#0045;level&#0032;domain&#0032;analysis | Product Hunt"
+          src="https://wubaohu.com/wp-content/uploads/2024/08/nic.bn_.png"
+          alt="domain registration"
           style={{ width: '250px', height: '54px' }}
           width="250"
           height="54"
