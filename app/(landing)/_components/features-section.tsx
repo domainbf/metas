@@ -7,7 +7,7 @@ type FeaturesSectionProps = HTMLAttributes<HTMLElement>;
 export const FeaturesSection: FC<FeaturesSectionProps> = (props) => (
   <section {...props}>
     <h2 className="mb-6 text-center text-3xl font-bold">
-      Domain Digger: The Essential Domain Information Tool
+      met.as: The Essential Domain Information Tool
     </h2>
 
     <div className="mb-24 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
@@ -16,7 +16,7 @@ export const FeaturesSection: FC<FeaturesSectionProps> = (props) => (
           A Comprehensive, Web-Based DNS Client
         </h3>
         <p>
-          Domain Digger is an advanced, web-based tool designed to provide
+          met.as is an advanced, web-based tool designed to provide
           detailed insights into domain-related data. It serves as a versatile
           DNS client, offering functionalities similar to command-line tools
           like dig and nslookup, but with the added convenience of a
@@ -45,7 +45,7 @@ export const FeaturesSection: FC<FeaturesSectionProps> = (props) => (
           Simplified Process, Enhanced Capabilities
         </h3>
         <p>
-          Using Domain Digger is straightforward. Simply enter a domain name,
+          Using met.as is straightforward. Simply enter a domain name,
           and you&apos;re instantly taken to a comprehensive overview of its DNS
           records. Behind the scenes, our tool queries a DNS server without
           caching results, ensuring you receive the most up-to-date information.
@@ -57,7 +57,7 @@ export const FeaturesSection: FC<FeaturesSectionProps> = (props) => (
           Choice of DNS Servers and Record Types
         </h3>
         <p>
-          Domain Digger offers the flexibility to select from a wide range of
+          met.as offers the flexibility to select from a wide range of
           DNS servers, including popular public DNS servers, authoritative
           servers for the domain in question, and local servers worldwide. By
           default, it displays standard records like A, AAAA, CNAME, TXT, NS,
@@ -83,7 +83,7 @@ export const FeaturesSection: FC<FeaturesSectionProps> = (props) => (
           Practical Applications and Use Cases
         </h3>
         <p>
-          Domain Digger is useful in various scenarios, such as verifying the
+          met.as is useful in various scenarios, such as verifying the
           correct configuration of DNS records for your domain or monitoring the
           propagation of DNS record changes across the domain name system. Its
           ability to display multiple record types simultaneously and the option
