@@ -24,7 +24,7 @@ export const AuthorSection: FC<AuthorSectionProps> = ({
       alt="Felix Wotschofsky, creator of Domain Met.as"
     />
     <div>
-      <p>Hey there, I am Lee, the creator of Domain Met.as. 👋</p>
+      <p>Hi, I am Lee, the creator of Domain Met.as. 👋</p>
       <p>
         You can{' '}
         <a
