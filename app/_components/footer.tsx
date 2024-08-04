@@ -2,7 +2,7 @@
 
 import type { FC } from 'react';
 import { useEffect } from 'react'; // 引入 useEffect 钩子
-import { FaHeart, FaWeebly, FaDochub, faCopyright } from 'react-icons/fa';
+import { FaHeart, FaWeebly, FaDochub, FaCopyright } from 'react-icons/fa';
 import { Button } from '@/components/ui/button';
 
 export const Footer: FC = () => {
@@ -64,7 +64,7 @@ export const Footer: FC = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <faCopyright className="h-6 w-6" />
+              <FaCopyright className="h-6 w-6" />
               <span className="sr-only">Visit author</span>
             </a>
           </Button>
