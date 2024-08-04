@@ -48,26 +48,6 @@ export const Footer: FC = () => {
               <span className="sr-only">Visit whois.ls</span>
             </a>
           </Button>
-          <Button variant="ghost" asChild>
-            <a
-              href="https://domain.bf"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaDochub className="h-6 w-6" />
-              <span className="sr-only">Visit domain name</span>
-            </a>
-          </Button>
-          <Button variant="ghost" asChild>
-            <a
-              href="https://wotschofsky.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaCopyright className="h-6 w-6" />
-              <span className="sr-only">Visit author</span>
-            </a>
-          </Button>
         </div>
       </div>
     </footer>
