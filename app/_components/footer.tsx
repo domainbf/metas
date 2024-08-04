@@ -28,12 +28,12 @@ export const Footer: FC = () => {
           <span className="sr-only">love</span> 🇨🇳{' '}
           <a
             className="underline decoration-dotted underline-offset-4"
-            href="https://domain.bf"
+            href="https://wotschofsky.com/"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="不讲李 (Site Creator)"
+            aria-label="Felix Wotschofsky (Site Creator)"
           >
-            Met.as
+           Author: Felix Wotschofsky
           </a>
         </p>
 
