@@ -1,8 +1,8 @@
 import type { FC, HTMLAttributes } from 'react';
 import { FaGithub, FaHeart } from 'react-icons/fa';
+import Head from 'next/head'; // 导入 Head 组件
 
 import { Button } from '@/components/ui/button';
-
 import PoweredByVercel from '@/assets/powered-by-vercel.svg';
 import { cn } from '@/lib/utils';
 
@@ -22,39 +22,44 @@ const VercelBadge: FC<VercelBadgeProps> = ({ className, ...props }) => (
 );
 
 export const Footer: FC = () => (
-  <footer className="w-full p-4 md:px-8">
-    <div className="flex flex-col items-center gap-4 border-t pt-4">
-      <VercelBadge className="md:hidden" />
+  <>
+    <Head>
+      <script defer src="https://china.tn/pixel/pUKNaPhlaltR3Mib"></script> {/* 插入统计代码 */}
+    </Head>
+    <footer className="w-full p-4 md:px-8">
+      <div className="flex flex-col items-center gap-4 border-t pt-4">
+        <VercelBadge className="md:hidden" />
 
-      <div className="flex w-full items-center justify-between">
-        <p className="text-sm">
-          Created with{' '}
-          <FaHeart className="inline text-red-500" fontSize="1.25rem" />
-          <span className="sr-only">love</span> by{' '}
-          <a
-            className="underline decoration-dotted underline-offset-4"
-            href="https://wotschofsky.com"
-            target="_blank"
-            rel="noopener"
-            aria-label="Felix Wotschofsky (Site Creator)"
-          >
-            Felix Wotschofsky
-          </a>
-        </p>
+        <div className="flex w-full items-center justify-between">
+          <p className="text-sm">
+            Created with{' '}
+            <FaHeart className="inline text-red-500" fontSize="1.25rem" />
+            <span className="sr-only">love</span> by{' '}
+            <a
+              className="underline decoration-dotted underline-offset-4"
+              href="https://wotschofsky.com"
+              target="_blank"
+              rel="noopener"
+              aria-label="Felix Wotschofsky (Site Creator)"
+            >
+              Felix Wotschofsky
+            </a>
+          </p>
 
-        <VercelBadge className="hidden md:block" />
+          <VercelBadge className="hidden md:block" />
 
-        <Button variant="ghost" asChild>
-          <a
-            href="https://github.com/wotschofsky/domain-digger"
-            target="_blank"
-            rel="noopener"
-          >
-            <FaGithub className="h-6 w-6" />
-            <span className="sr-only">GitHub Repository</span>
-          </a>
-        </Button>
+          <Button variant="ghost" asChild>
+            <a
+              href="https://github.com/wotschofsky/domain-digger"
+              target="_blank"
+              rel="noopener"
+            >
+              <FaGithub className="h-6 w-6" />
+              <span className="sr-only">GitHub Repository</span>
+            </a>
+          </Button>
+        </div>
       </div>
-    </div>
-  </footer>
+    </footer>
+  </>
 );
