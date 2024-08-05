@@ -17,19 +17,19 @@ export const AuthorSection: FC<AuthorSectionProps> = ({
     {...props}
   >
     <Image
-      width={38}
-      height={38}
+      width={48}
+      height={48}
       className="h-12 w-12 rounded-full"
-      src="https://wubaohu.com/wp-content/uploads/2024/08/Lee.png?v=123456789"
-      alt="Felix Wotschofsky, creator of Domain Met.as"
+      src="https://static.wsky.dev/branding/photo.jpg"
+      alt="Felix Wotschofsky, creator of Domain Digger"
     />
     <div>
-      <p>Hi, I am Lee, the creator of Domain Met.as. 👋</p>
+      <p>Hey there, I am Felix, the creator of Domain Digger. 👋</p>
       <p>
         You can{' '}
         <a
           className="underline decoration-dotted underline-offset-4"
-          href="https://x.com/domain_bf"
+          href="https://x.com/wotschofsky"
           target="_blank"
         >
           follow me on X
@@ -37,7 +37,7 @@ export const AuthorSection: FC<AuthorSectionProps> = ({
         and{' '}
         <a
           className="underline decoration-dotted underline-offset-4"
-          href="https://dev.ug/"
+          href="https://wotschofsky.com/"
           target="_blank"
         >
           check out my other projects
