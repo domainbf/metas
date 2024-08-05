@@ -24,23 +24,23 @@ export const AuthorSection: FC<AuthorSectionProps> = ({
       alt="Thanks to the open source author: Felix Wotschofsky"
     />
     <div>
-      <p>Created based on the open source program by Felix Wotschofsky. 👋</p>
+      <p>Hi, I am the founder of domain name registrar NIC.BN. 🪐</p>
       <p>
-        You can{' '}
+        Provide{' '}
         <a
           className="underline decoration-dotted underline-offset-4"
-          href="https://x.com/domain_bf"
+          href="https://nic.bn/order"
           target="_blank"
         >
-          follow me on X
+          domain name registration
         </a>{' '}
         and{' '}
         <a
           className="underline decoration-dotted underline-offset-4"
-          href="https://dev.ug/"
+          href="https://domain.bf/"
           target="_blank"
         >
-          check out my other projects
+          You can also view domain names that are for sale.
         </a>
         .
       </p>
