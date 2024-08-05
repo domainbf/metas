@@ -20,7 +20,7 @@ export const AuthorSection: FC<AuthorSectionProps> = ({
       width={48}
       height={48}
       className="h-12 w-12 rounded-full"
-      src="https://wubaohu.com/wp-content/uploads/2024/08/Lee.png"
+      src="/assets/Lee.png"
       alt="Thanks to the open source author: Felix Wotschofsky"
     />
     <div>
