@@ -16,7 +16,7 @@ export const AuthorSection: FC<AuthorSectionProps> = ({
     )}
     {...props}
   >
-    <img
+    <Image
       width={38}
       height={38}
       className="h-12 w-12 rounded-full"
