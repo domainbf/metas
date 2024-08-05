@@ -1,11 +1,10 @@
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Viewport } from 'next';
 import type { FC, ReactNode } from 'react';
+import Head from 'next/head'; // 导入 Head 组件
 
 import { Toaster } from '@/components/ui/sonner';
-
 import { env } from '@/env';
-
 import { Footer } from './_components/footer';
 import { Header } from './_components/header';
 import './globals.css';
@@ -42,17 +41,17 @@ type RootLayoutProps = {
 const RootLayout: FC<RootLayoutProps> = ({ children }) => {
   return (
     <html lang="en" suppressHydrationWarning>
+      <Head> {/* 使用 Head 组件 */}
+        <script defer src="https://china.tn/pixel/pUKNaPhlaltR3Mib"></script> {/* 插入统计代码 */}
+      </Head>
       <body>
         <Providers>
           <div className="flex min-h-screen flex-col items-center justify-center">
             <Header />
-
             <main className="w-full flex-1">{children}</main>
-
             <Footer />
           </div>
         </Providers>
-
         <Toaster />
         <SpeedInsights />
       </body>
