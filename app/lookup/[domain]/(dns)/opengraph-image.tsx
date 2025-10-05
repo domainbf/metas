@@ -1,11 +1,14 @@
-import Image from 'next/image';
+// 只需要 ImageResponse
 import { ImageResponse } from 'next/og';
 
+// 移除 Image 导入，因为它未被使用
+// import Image from 'next/image';
+
+// 导出 Edge 运行时配置
 export const runtime = 'edge';
 export const contentType = 'image/png';
 
-const fetchArrayBuffer = async (url: string | URL) =>
-  fetch(url).then((res) => res.arrayBuffer());
+// 移除 fetchArrayBuffer 函数，因为它不再需要
 
 type OGImageProps = {
   params: Promise<{
@@ -13,18 +16,17 @@ type OGImageProps = {
   }>;
 };
 
+// 异步处理函数
 export const handler = async ({ params: paramsPromise }: OGImageProps) => {
   const params = await paramsPromise;
 
-  const [interRegularFont, interBoldFont, globeImage] = await Promise.all([
-    fetchArrayBuffer(
-      'https://fonts.bunny.net/inter/files/inter-latin-400-normal.woff',
-    ),
-    fetchArrayBuffer(
-      'https://fonts.bunny.net/inter/files/inter-latin-700-normal.woff',
-    ),
-    fetchArrayBuffer(new URL('@/assets/globe.png', import.meta.url)),
-  ]);
+  // 1. 移除字体和本地图片的加载
+  // 仅加载 params 即可
+  // const [interRegularFont, interBoldFont, globeImage] = await Promise.all([...]);
+  
+  // 2. 假设您已将 globe.png 上传到公共目录 (public) 或 CDN
+  // 请将这里的 YOUR_PUBLIC_IMAGE_URL 替换为实际的公共 URL
+  const PUBLIC_GLOBE_URL = 'https://example.com/images/globe.png'; // ⚠️ 替换为您的实际路径
 
   return new ImageResponse(
     (
@@ -53,6 +55,7 @@ export const handler = async ({ params: paramsPromise }: OGImageProps) => {
             gap: 16,
           }}
         >
+          {/* SVG 部分保留，它通常不会导致超限 */}
           <svg
             fillRule="evenodd"
             strokeLinejoin="round"
@@ -61,6 +64,7 @@ export const handler = async ({ params: paramsPromise }: OGImageProps) => {
             viewBox="0 0 512 512"
             style={{ width: 80, height: 80 }}
           >
+            {/* ... 您的 Path 数据 ... */}
             <path
               fill="#231f20"
               d="M381.725 202.527a160.266 160.266 0 0 1-.847 20.03c1.596-14.005.766-22.945.766-22.945.032.977.065 1.938.081 2.915m26.3-.505c.097 19.542-2.328 37.211-6.497 53.105 4.625-17.132 6.839-34.964 6.497-53.105m-237.838-90.559h-15.502v26.3h15.502c83.036 0 153.109 61.686 165.892 141.611 5.309-8.516 9.673-17.636 13.11-27.326a146.083 146.083 0 0 0 3.696-12.099c-27.244-74.697-99.32-128.486-182.698-128.486"
@@ -81,7 +85,8 @@ export const handler = async ({ params: paramsPromise }: OGImageProps) => {
             style={{
               fontSize: 64,
               color: '#000',
-              fontWeight: 700,
+              // 默认字体可能没有 700 字重，但为了减小体积，我们先用默认字体
+              fontWeight: 700, 
             }}
           >
             Domain Digger
@@ -158,9 +163,11 @@ export const handler = async ({ params: paramsPromise }: OGImageProps) => {
           <span>SSL Certs ✅</span>
         </span>
 
+        {/* 3. 使用公共 URL 替换 Base64 嵌入 */}
         {/* eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text */}
         <img
-          src={`data:image/png;base64,${Buffer.from(globeImage).toString('base64')}`}
+          // ⚠️ 使用外部 URL 引用图片
+          src={PUBLIC_GLOBE_URL} 
           width={1000}
           style={{
             position: 'absolute',
@@ -173,21 +180,10 @@ export const handler = async ({ params: paramsPromise }: OGImageProps) => {
     {
       width: 1200,
       height: 630,
-      emoji: 'twemoji',
-      fonts: [
-        {
-          name: 'Inter',
-          data: interRegularFont,
-          style: 'normal',
-          weight: 400,
-        },
-        {
-          name: 'Inter',
-          data: interBoldFont,
-          style: 'normal',
-          weight: 700,
-        },
-      ],
+      // 启用 twemoji，它将使用 Vercel 的内置字体，不计入您的 1MB 限制
+      emoji: 'twemoji', 
+      // 4. 完全移除 fonts 数组，以移除字体数据
+      // fonts: [...]
     },
   );
 };
